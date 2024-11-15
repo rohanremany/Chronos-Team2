@@ -22,7 +22,7 @@ public class Intake extends SubsystemBase{
         m_intake = new TalonFX(Constants.HardwarePorts.m_intake);
     }
 
-    private enum IntakeStates {
+    public enum IntakeStates {
         FORWARD(0.5),
         OFF(0),
         REV(-0.5);
