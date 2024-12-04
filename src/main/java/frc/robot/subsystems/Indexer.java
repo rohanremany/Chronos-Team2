@@ -24,18 +24,23 @@ public class Indexer extends SubsystemBase{
 
     }
 
-    public enum indexerSpeed{
+    public enum indexerState{
         INSPEED(0.5), //random speed
-        OUTSPEED(-0.5);
+        OUTSPEED(-0.5),
+        OFF(0);
 
         private double s;
 
-        indexerSpeed(double s){
+        public double getValue() {
+            return s;
+        }
+
+        indexerState(double s){
             this.s = s;
         }
     }
 
-    public void setDirectSpeed(indexerSpeed speed){
+    public void setDirectSpeed(indexerState speed){
         in_indexerMotor.set(speed.s);
         out_indexerMotor.set(speed.s);
     }
