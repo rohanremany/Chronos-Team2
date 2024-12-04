@@ -3,6 +3,7 @@ package frc.robot.subsystems;
 import com.ctre.phoenix6.hardware.TalonFX;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
 
 public class Indexer extends SubsystemBase{
     public static Indexer instance;
@@ -19,8 +20,8 @@ public class Indexer extends SubsystemBase{
     private TalonFX out_indexerMotor;
     
     public Indexer(){
-        in_indexerMotor = new TalonFX(2); //random ports
-        out_indexerMotor = new TalonFX(3);
+        in_indexerMotor = new TalonFX(Constants.HardwarePorts.leftIndexer); //random ports
+        out_indexerMotor = new TalonFX(Constants.HardwarePorts.rightIndexer);
 
     }
 
