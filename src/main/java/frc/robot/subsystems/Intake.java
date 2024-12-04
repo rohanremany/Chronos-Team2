@@ -21,24 +21,24 @@ public class Intake extends SubsystemBase{
         m_intake = new TalonFX(Constants.HardwarePorts.intake);
     }
 
-    public enum IntakeSpeeds {
+    public enum IntakeStates {
         FORWARD(0.5),
         OFF(0),
         REV(-0.5);
 
-        private double speed;
+        private double state;
 
         private double getValue() {
-            return speed;
+            return state;
         }
 
-        IntakeSpeeds(double speed) {
-            this.speed = speed;
+        IntakeStates(double state) {
+            this.state = state;
         }
     }
 
-    public void setSpeed(IntakeSpeeds state) {
-        m_intake.set(state.speed);
+    public void setState(IntakeStates state) {
+        m_intake.set(state.state);
     }
 
     @Override
