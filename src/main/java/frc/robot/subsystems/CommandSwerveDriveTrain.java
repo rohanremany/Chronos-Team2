@@ -15,18 +15,19 @@ import edu.wpi.first.wpilibj2.command.Subsystem;
 import frc.robot.Constants.TunerConstants;
 
 public class CommandSwerveDriveTrain extends SwerveDrivetrain implements Subsystem{
-    //private static CommandSwerveDriveTrain s_Swerve = TunerConstants.DriveTrain;
+    private static CommandSwerveDriveTrain s_Swerve = TunerConstants.DriveTrain;
 
-    /*public static CommandSwerveDriveTrain getInstance(){
-        //if(s_Swerve == null){
-            //s_Swerve = new CommandSwerveDriveTrain(TunerConstants.DrivetrainConstants, 250, TunerConstants.FrontLeft,
-            //TunerConstants.FrontRight, TunerConstants.BackLeft, TunerConstants.BackRight);  
+
+    public static CommandSwerveDriveTrain getInstance(){
+        if(s_Swerve == null){
+            s_Swerve = new CommandSwerveDriveTrain(TunerConstants.DrivetrainConstants, 250, TunerConstants.FrontLeft,
+            TunerConstants.FrontRight, TunerConstants.BackLeft, TunerConstants.BackRight);  
         }
-        //return s_Swerve;
-    }*/
+        return s_Swerve;
+    }
 
-    /*private void limit() {
-        for (SwerveModule module : Modules) {
+    private void limit() {
+        for (SwerveModule module : SwerveDrivetrain.Modules) {
             CurrentLimitsConfigs configs = new CurrentLimitsConfigs();
             configs.SupplyCurrentLimit = 20;
             configs.SupplyCurrentLimitEnable = true;
@@ -37,11 +38,11 @@ public class CommandSwerveDriveTrain extends SwerveDrivetrain implements Subsyst
             module.getDriveMotor().getConfigurator().apply(configs);
             module.getSteerMotor().getConfigurator().apply(configs);
         }
-    }*/
+    }
 
     public CommandSwerveDriveTrain(SwerveDrivetrainConstants driveTrainConstants, SwerveModuleConstants... modules) {
         super(driveTrainConstants, modules);
-        //limit();
+        limit();
     }
 
     public Command applyRequest(Supplier<SwerveRequest> requestSupplier) {

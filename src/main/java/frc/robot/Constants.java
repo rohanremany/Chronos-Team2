@@ -1,9 +1,9 @@
 package frc.robot;
 
 import com.ctre.phoenix6.configs.Slot0Configs;
-import com.ctre.phoenix6.mechanisms.swerve.LegacySwerveModule.ClosedLoopOutputType;
+//import com.ctre.phoenix6.mechanisms.swerve.LegacySwerveModule.ClosedLoopOutputType;
 import com.ctre.phoenix6.swerve.SwerveDrivetrainConstants;
-import com.ctre.phoenix6.swerve.SwerveModuleConstants;
+import com.ctre.phoenix6.swerve.SwerveModuleConstants.ClosedLoopOutputType;
 import com.ctre.phoenix6.swerve.SwerveModuleConstantsFactory;
 import com.ctre.phoenix6.swerve.SwerveModuleConstants.SteerFeedbackType;
 
@@ -64,11 +64,11 @@ public class Constants {
         private static final String kCANbusName = "";
         private static final int kPigeonId = 2;
 
-        /*public static final SwerveDrivetrainConstants DrivetrainConstants = new SwerveDrivetrainConstants()
+        public static final SwerveDrivetrainConstants DrivetrainConstants = new SwerveDrivetrainConstants()
                 .withPigeon2Id(kPigeonId)
-                .withCANbusName(kCANbusName);*/
+                .withCANbusName(kCANbusName);
 
-        /*private static final SwerveModuleConstantsFactory ConstantCreator = new SwerveModuleConstantsFactory()
+        private static final SwerveModuleConstantsFactory ConstantCreator = new SwerveModuleConstantsFactory()
                 .withDriveMotorGearRatio(kDriveGearRatio)
                 .withSteerMotorGearRatio(kSteerGearRatio)
                 .withWheelRadius(kWheelRadiusInches)
@@ -84,7 +84,7 @@ public class Constants {
                 .withDriveFrictionVoltage(kDriveFrictionVoltage)
                 .withFeedbackSource(SteerFeedbackType.FusedCANcoder)
                 .withCouplingGearRatio(kCoupleRatio)
-                .withSteerMotorInverted(kSteerMotorReversed);*/
+                .withSteerMotorInverted(kSteerMotorReversed);
 
         public static final int frontLeftSteer = 1;
         public static final int frontLeftDrive = 2;
@@ -115,7 +115,7 @@ public class Constants {
         public static final int backRightCancoder = 11;
         public static final int frontRightCancoder = 12;
 
-        /*public static final SwerveModuleConstants FrontLeft = ConstantCreator.createModuleConstants(
+        public static final SwerveModuleConstants FrontLeft = ConstantCreator.createModuleConstants(
                 frontLeftSteer, frontLeftDrive, frontLeftCancoder, kFrontLeftEncoderOffset, Units.inchesToMeters(kFrontLeftXPosInches), Units.inchesToMeters(kFrontLeftYPosInches), kInvertLeftSide, kInvertLeftSide);
         public static final SwerveModuleConstants FrontRight = ConstantCreator.createModuleConstants(
                 frontRightSteer, frontRightDrive, frontRightCancoder, kFrontRightEncoderOffset, Units.inchesToMeters(kFrontRightXPosInches), Units.inchesToMeters(kFrontRightYPosInches), kInvertRightSide, kInvertRightSide);
@@ -125,6 +125,6 @@ public class Constants {
                 backRightSteer, backRightCancoder, backRightCancoder, kBackRightEncoderOffset, Units.inchesToMeters(kBackRightXPosInches), Units.inchesToMeters(kBackRightYPosInches), kInvertRightSide, kInvertRightSide);
 
         public static final CommandSwerveDriveTrain DriveTrain = new CommandSwerveDriveTrain(DrivetrainConstants, FrontLeft,
-                FrontRight, BackLeft, BackRight);*/
+                FrontRight, BackLeft, BackRight);
     }
 }
