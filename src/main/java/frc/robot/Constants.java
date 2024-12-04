@@ -7,7 +7,7 @@ import com.ctre.phoenix6.swerve.SwerveModuleConstants.ClosedLoopOutputType;
 import com.ctre.phoenix6.swerve.SwerveModuleConstantsFactory;
 import com.ctre.phoenix6.swerve.SwerveModuleConstants.SteerFeedbackType;
 
-import frc.robot.subsystems.CommandSwerveDriveTrain;
+//import frc.robot.subsystems.CommandSwerveDriveTrain;
 import edu.wpi.first.math.util.Units;
 
 public class Constants {
@@ -22,7 +22,7 @@ public class Constants {
         public static final int leftShooter = 31;
         public static final int rightShooter = 32;
     }
-    
+    /* 
     public static final class TunerConstants {
         private static final double kDriveGearRatio = 5.25;
         private static final double kSteerGearRatio = 21.428571428571427;
@@ -126,5 +126,5 @@ public class Constants {
 
         public static final CommandSwerveDriveTrain DriveTrain = new CommandSwerveDriveTrain(DrivetrainConstants, FrontLeft,
                 FrontRight, BackLeft, BackRight);
-    }
+    }*/
 }
