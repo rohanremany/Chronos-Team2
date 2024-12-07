@@ -21,12 +21,16 @@ public class Robot extends TimedRobot {
   private Shooter s_Shooter;
   private Indexer s_Indexer;
 
-  @Override
-  public void robotInit() {
-    m_robotContainer = new RobotContainer();
+  public Robot() {
+    super();
     s_Intake = Intake.getInstance();
     s_Shooter = Shooter.getInstance();
     s_Indexer = Indexer.getInstance();
+  }
+
+  @Override
+  public void robotInit() {
+    m_robotContainer = new RobotContainer();
   }
 
   @Override
