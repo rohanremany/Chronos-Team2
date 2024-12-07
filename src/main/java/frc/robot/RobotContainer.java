@@ -31,6 +31,9 @@ public class RobotContainer {
   }
 
   public final CommandXboxController driver = new CommandXboxController(0);
+  //private final Trigger rightTrigger = driver.rightTrigger();
+  //private void configureBindings() {
+    //rightTrigger.whileTrue(new SetShooter(Shooter.ShooterStates.ON));
   private final Intake s_Intake = Intake.getInstance();
   private final Shooter s_Shooter = Shooter.getInstance();
   private final Indexer s_Indexer = Indexer.getInstance();
