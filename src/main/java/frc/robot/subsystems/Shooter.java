@@ -59,6 +59,11 @@ public class Shooter extends SubsystemBase{
 
     public void setSpeed(ShooterStates state) {
         m_shooterLeader.set(state.speed);
+        
+    }
+
+    public double getSpeed() {
+        return m_shooterLeader.get();
     }
 
     @Override
