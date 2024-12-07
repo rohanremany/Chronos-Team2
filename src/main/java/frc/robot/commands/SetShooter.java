@@ -32,4 +32,9 @@ public class SetShooter extends Command{
     public void end(boolean interrupted){
         skibidiShooter.setSpeed(ShooterStates.OFF);
     }
+
+    //@Override public void end(boolean interrupted){ 
+        //skibidiShooter.setSpeed(ShooterStates.OFF); 
+    //} 
 }
+

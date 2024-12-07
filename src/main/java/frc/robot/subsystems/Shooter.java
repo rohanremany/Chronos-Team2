@@ -8,6 +8,7 @@ import com.ctre.phoenix6.signals.NeutralModeValue;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
 
 public class Shooter extends SubsystemBase{
     private static Shooter instance;
@@ -24,8 +25,8 @@ public class Shooter extends SubsystemBase{
     private TalonFX m_shooterFollower;
 
     public Shooter(){
-        m_shooterLeader = new TalonFX(0); //random values
-        m_shooterFollower = new TalonFX(1);
+        m_shooterLeader = new TalonFX(Constants.HardwarePorts.leftShooter); //random values
+        m_shooterFollower = new TalonFX(Constants.HardwarePorts.rightShooter);
         
         configMotor(m_shooterLeader, false);
         configMotor(m_shooterFollower, true);
@@ -44,7 +45,8 @@ public class Shooter extends SubsystemBase{
 
     public enum ShooterStates{
         ON(0.5),
-        OFF(0);
+        OFF(0),
+        REV(-0.5);
 
         private double speed;
 
@@ -59,7 +61,7 @@ public class Shooter extends SubsystemBase{
 
     public void setSpeed(ShooterStates state) {
         m_shooterLeader.set(state.speed);
-        
+      m_shooterFollower.set(state.speed);    
     }
 
     public double getSpeed() {
