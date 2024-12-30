@@ -2,10 +2,10 @@ package frc.robot;
 
 import com.ctre.phoenix6.configs.Slot0Configs;
 //import com.ctre.phoenix6.mechanisms.swerve.LegacySwerveModule.ClosedLoopOutputType;
-import com.ctre.phoenix6.swerve.SwerveDrivetrainConstants;
+/*import com.ctre.phoenix6.swerve.SwerveDrivetrainConstants;
 import com.ctre.phoenix6.swerve.SwerveModuleConstants.ClosedLoopOutputType;
 import com.ctre.phoenix6.swerve.SwerveModuleConstantsFactory;
-import com.ctre.phoenix6.swerve.SwerveModuleConstants.SteerFeedbackType;
+import com.ctre.phoenix6.swerve.SwerveModuleConstants.SteerFeedbackType; */
 
 //import frc.robot.subsystems.CommandSwerveDriveTrain;
 import edu.wpi.first.math.util.Units;

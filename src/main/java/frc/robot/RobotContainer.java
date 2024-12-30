@@ -40,7 +40,7 @@ public class RobotContainer {
   private final Trigger driverX = driver.x();
   private final Trigger driverY = driver.y();
   private final Trigger driverRightBumper = driver.rightBumper();
-  private final Trigger driverLeftBumper = driver.rightBumper();
+  private final Trigger driverLeftBumper = driver.leftBumper();
 
   public CommandXboxController getDriverController(){
     return driver;
